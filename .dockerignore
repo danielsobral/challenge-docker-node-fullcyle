@@ -1,0 +1,4 @@
+mysql/
+.git
+.dockerignore
+Dockerfile
