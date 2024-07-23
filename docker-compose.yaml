@@ -16,6 +16,7 @@ services:
       context: .
       dockerfile: Dockerfile
     container_name: node
+    restart: always
     entrypoint: ["sh", "-c", "dockerize -wait tcp://mysql:3306 -timeout 20s && npm install && ./node_modules/.bin/nodemon index.js"]
     networks:
       - node_net
